@@ -1155,6 +1155,7 @@ html body .woocommerce .button.alt[disabled] {
   position: relative;
   height: 6.6667vw;
   margin: 0.2604vw 0;
+  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
