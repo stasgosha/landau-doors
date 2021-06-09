@@ -1167,6 +1167,22 @@ html body .woocommerce .button.alt[disabled] {
   background: #2a2d2d;
   background: radial-gradient(circle, #2a2d2d 0%, black 100%);
 }
+.questions-component .questions li button {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.questions-component .questions li button:focus {
+  outline: none;
+}
 .questions-component .questions li p {
   font-size: 1.1458vw;
   line-height: 1.4;
@@ -1174,6 +1190,11 @@ html body .woocommerce .button.alt[disabled] {
   opacity: 0.4;
   text-align: center;
   max-width: 3.125vw;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+.questions-component .questions li.current p, .questions-component .questions li:hover p {
+  opacity: 1;
 }
 .questions-component .questions li.current {
   position: relative;
@@ -1188,9 +1209,6 @@ html body .woocommerce .button.alt[disabled] {
   height: 8.2292vw;
   -webkit-animation: leftToRight 4s infinite ease-in-out;
           animation: leftToRight 4s infinite ease-in-out;
-}
-.questions-component .questions li.current p {
-  opacity: 1;
 }
 
 .gallery-wrrap {
