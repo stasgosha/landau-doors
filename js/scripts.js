@@ -39,80 +39,108 @@ document.addEventListener('DOMContentLoaded', function(){
 		nextArrow: '<button type="button" class="slick-next" aria-label="Next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.4 52.75"><path data-name="Path 70" d="M26.4 52.4L.7 26.05 27.05.35" fill="none" stroke="#2f2970" stroke-miterlimit="10"/></svg></button>'
 	}
 
-	$('.first-screen-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true,
-		...arrowsButtons,
-		dots: false,
-		infinite: true,
-		autoplaySpeed: 7000,
-		speed: 800,
-		rtl: isRTL,
-		asNavFor: '.first-screen-slider-nav',
-		cssEase: 'ease-in-out',
-		touchThreshold: 100,
-		draggable: true,
-		autoplay: true,
-		fade: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					dots: true
+	// Scroll behaviors
+	let currentScreen = 0;
+	const bgVideos = document.querySelectorAll('#page-video-bg video');
+	const bgVideo = document.querySelector('#page-video-bg video#straight');
+	const bgVideoReverse = document.querySelector('#page-video-bg video#reverse');
+	const sections = document.querySelectorAll('.fullscreen-section');
+	let isScrolling = false;
+
+	bgVideo.pause();
+
+	function goToScreen(next){
+
+		debugger;
+		if (next < 0) return false;
+		if (next >= sections.length) return false;
+		if (isScrolling) return false;
+
+		let direction = next > currentScreen ? 'down' : 'up';
+
+		currentScreen = next;
+
+		let isPlaying = false;
+		let isPlayingReverse = false;
+
+		// Scroll to section
+		$('.page-content').css({
+			transform: `translateY(${ (next / sections.length) * -100 }%)`
+		});
+
+		isScrolling = true;
+
+		setTimeout(function(){
+			isScrolling = false;
+		}, 1500);
+
+		// Work with video
+		let nextPoint = +sections[next].dataset.point;
+
+		if (!nextPoint) {
+			nextPoint = next / sections.length;
+		}
+
+		if (direction == 'down') {
+			let videoListener = bgVideo.addEventListener('timeupdate', function(e){
+				if (bgVideo.paused) return false;
+
+				let currentPosition = bgVideo.currentTime / bgVideo.duration;
+				bgVideoReverse.currentTime = bgVideo.duration - bgVideo.currentTime;
+
+				bgVideo.classList.remove('hidden');
+				bgVideoReverse.classList.add('hidden');
+
+				if (currentPosition >= nextPoint) {
+					isPlaying && bgVideo.pause();
+					isPlaying = false;
+
+					console.log('down - paused');
+
+					removeEventListener('timeupdate', videoListener);
 				}
-			}
-		]
-	});
-	$('.first-screen-slider-nav').slick({
-	  slidesToShow: 1,
-	  slidesToScroll: 1,
-	  infinite: true,
-	  autoplay: false,
-	  rtl: isRTL,
-	  asNavFor: '.first-screen-slider',  
-	  cssEase: 'ease-in-out',
-	  touchThreshold: 100,
-	  draggable: true,
-	  fade: true,
-	});
+			});
 
-	$('.products-slider').slick({
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		arrows: true,
-		...arrowsButtons,
-		dots: false,
-		infinite: true,
-		speed: 600,
-		rtl: isRTL,
-		responsive: [
-			{
-				breakpoint: 576,
-				settings: 'unslick'
-			}
-		]
-	});
+			bgVideo.play();
+			isPlaying = true;
+		}
 
-	equalSlideHeight('.products-slider');
+		if (direction == 'up') {
+			let videoListener = bgVideoReverse.addEventListener('timeupdate', function(e){
+				if (bgVideoReverse.paused) return false;
 
-	$('.slider-info').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true,
-		...arrowsButtons, 
-		dots: true, 
-		infinite: true,
-		speed: 800,
-		rtl: isRTL, 
-		responsive: [
-			{ 
-				breakpoint: 768,
-				settings: {
-					arrows: false
+				let currentPosition = bgVideoReverse.currentTime / bgVideoReverse.duration;
+				bgVideo.currentTime = bgVideoReverse.duration - bgVideoReverse.currentTime;
+
+				bgVideoReverse.classList.remove('hidden');
+				bgVideo.classList.add('hidden');
+
+				console.log((1 - nextPoint), currentPosition);
+
+				if (currentPosition >= (1 - nextPoint) - 0.03) {
+					isPlayingReverse && bgVideoReverse.pause();
+					isPlayingReverse = false;
+
+					console.log('up - paused');
+
+					removeEventListener('timeupdate', videoListener);
 				}
-			}
-		] 
+			});
+
+			bgVideoReverse.play();
+			isPlayingReverse = true;
+		}
+	}
+
+	$('body').bind('mousewheel', function(e){
+		if(e.originalEvent.wheelDelta / 120 > 0) {
+			// Scroll Up
+			goToScreen(currentScreen - 1);
+		}
+		else{
+			// Scroll Down
+			goToScreen(currentScreen + 1);
+		}
 	});
 
 	// Scroll to anchor

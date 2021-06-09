@@ -16,11 +16,11 @@ $text-dark: $dark;
 $text-light: $light;
 
 $primary: $red;
-$accent: $blue;
+$accent: $turquoise;
 
 // Params
 $gradient: linear-gradient(180deg, #310000 0%, #000000 100%);
-$body-bg: rgba($blue, .1); // site background
+$body-bg: #fff; // site background
 $t: .3s; // animation duration
 $r: 0.3125vw; // default border radius
 $shadow: unset; // default card shadow
