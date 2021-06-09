@@ -1112,6 +1112,8 @@ html body .woocommerce .button.alt[disabled] {
 }
 .questions-component .answers-wrapper .slide {
   height: 20.8333vw !important;
+  background: #fff;
+  border-radius: 10px;
 }
 .questions-component .answers-wrapper .slide img {
   width: 100%;
