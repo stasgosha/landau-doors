@@ -1097,6 +1097,7 @@ html body .woocommerce .button.alt[disabled] {
   border-radius: 10px;
   margin: 0.5208vw 0;
   position: relative;
+  overflow: hidden;
 }
 .questions-component .answers-wrapper::before {
   content: "";
