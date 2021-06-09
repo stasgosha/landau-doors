@@ -1,0 +1,97 @@
+@mixin p{
+	font-size: 1.4583vw; // 28px
+	line-height: 1.25;
+}
+
+@mixin p-big{
+	// https://clip2net.com/s/4ck9smf 
+	// 1 - h1,h2
+	// 2 - p-big
+	// 3 - p
+
+
+	// https://c2n.me/4ck9zVD
+	// 1 - h4
+	// 2 - p-small
+	// 3 - h3
+}
+
+body{
+	font-family: $main-font;
+	color: $text-color;
+	font-weight: 300;
+
+	@include p;
+}
+
+@mixin h1{
+	font-size: 3.5938vw;
+	line-height: 1;
+	font-weight: 400;
+}
+
+@mixin h2{
+	@include h1;
+}
+
+@mixin h3{
+	font-size: 2.2917vw; // 44
+	line-height: 1;
+	font-weight: 400;
+}
+
+.tpg{
+	p{
+		margin-bottom: 0.6em;
+		@include p;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	ul{
+		margin-bottom: 0.6em;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		li{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 0.5556vw;
+				height: 0.5556vw;
+				background: $primary;
+				border-radius: 50%;
+				margin-right: 0.3472vw;
+			}
+		}
+	}
+}
+
+.page-caption{
+	@include h1;
+	margin-bottom: 1.6667vw;
+}
+
+.section-caption{
+	.sc-title{
+		@include h2;
+		margin-bottom: 0.4167vw;
+		position: relative;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.sc-subtitle{
+		@include p;
+	}
+
+	&.text-center{
+		text-align: center;
+	}
+}

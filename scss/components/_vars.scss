@@ -1,0 +1,26 @@
+// Fonts
+$main-font: 'Assistant', Arial, sans-serif;
+$second-font: 'Suez One', $main-font;
+
+// Colors
+$red: #C64839;
+$turquoise: #0D7C6F;
+// $blue: #186282;
+
+$gray: #000;
+$dark: #000;
+$light: #000;
+
+$text-color: $gray;
+$text-dark: $dark;
+$text-light: $light;
+
+$primary: $red;
+$accent: $blue;
+
+// Params
+$gradient: linear-gradient(180deg, #310000 0%, #000000 100%);
+$body-bg: rgba($blue, .1); // site background
+$t: .3s; // animation duration
+$r: 0.3125vw; // default border radius
+$shadow: unset; // default card shadow

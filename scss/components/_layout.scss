@@ -1,0 +1,158 @@
+*,
+*:before,
+*:after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	position: relative;
+	background: $body-bg;
+	background-attachment: fixed;
+
+	&.overflow{
+		overflow: hidden;
+	}
+
+	&.modal-visible{
+		overflow: hidden;
+		height: 100vh;
+	}
+
+	img{
+		max-width: unset;
+	}
+}
+
+ul, ol{
+	list-style: none;
+}
+
+button{
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	appearance: none;
+	font-family: inherit;
+	box-shadow: none;
+	border-radius: 0;
+	// outline: none !important;
+}
+
+a, button{
+	text-decoration: none;
+	transition: all $t;
+	// outline: none !important;
+	border: none;
+}
+
+a img{
+	// outline: none !important;
+	// border: none !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+picture, iframe, figure{
+	display: block;
+}
+
+.wrapper{
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 6.3609vw;
+
+	@media screen and (max-width: 991px){
+		padding-top: 67px;
+	}
+
+	@media screen and (max-width: 767px){
+		padding-top: 89px;
+	}
+
+	@media screen and (max-width: 575px){
+		padding-top: 27.4667vw;
+	}
+
+	.page-content{
+		flex: auto;
+		position: relative;
+		z-index: 5;
+	}
+
+	.footer{
+		flex: none;
+	}
+}
+
+.container{
+	width: 91.1215vw;
+	margin: 0 auto;
+
+	@media screen and (min-width: 992px){
+		max-width: 72.7083vw;
+	}
+}
+
+.cards-list{
+	display: grid;
+	grid-gap: 0.8333vw;
+
+	@for $i from 2 through 6 {
+		&.columns-#{$i} {
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		@for $i from 1 through 4 {
+			&.lg-columns-#{$i} {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		grid-gap: 8px;
+
+		@for $i from 1 through 4 {
+			&.md-columns-#{$i} {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		@for $i from 1 through 3 {
+			&.sm-columns-#{$i} {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		@for $i from 1 through 3 {
+			&.xs-columns-#{$i} {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+}
+
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
