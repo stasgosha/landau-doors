@@ -143,6 +143,36 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	});
 
+	// Questions
+	$('.questions-component').each(function(i, el){
+		$(el).find('.answers').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			fade: true,
+			speed: 600,
+			swipe: false,
+			rtl: isRTL, 
+		});
+
+		$(el).find('.questions li').append('<div class="item-line"></div>');
+
+		equalSlideHeight($(el).find('.answers'));
+
+		$(el).find('.questions button').click(function(e){
+			e.preventDefault();
+
+			let slideIndex = parseInt( $(this).closest('li').data('slide') );
+
+			$(this).closest('li').addClass('current').siblings().removeClass("current");
+
+			$(el).find('.answers').slick('slickGoTo', slideIndex);
+		});
+
+		$(el).find('.questions button').eq(0).trigger('click');
+	});
+
 	// Scroll to anchor
 	$(document).on('click', 'a[href^="#"]', function (event) {
 		event.preventDefault();
