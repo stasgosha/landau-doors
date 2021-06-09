@@ -1097,7 +1097,6 @@ html body .woocommerce .button.alt[disabled] {
   border-radius: 10px;
   margin: 0.5208vw 0;
   position: relative;
-  overflow: hidden;
 }
 .questions-component .answers-wrapper::before {
   content: "";
@@ -1126,6 +1125,7 @@ html body .woocommerce .button.alt[disabled] {
 .questions-component .answers-wrapper .slider-img-text {
   padding: 2.0833vw;
   background-color: #fff;
+  border-radius: 10px 10px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
