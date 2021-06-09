@@ -96,25 +96,55 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	equalSlideHeight('.products-slider');
 
-	$('.slider-info').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true,
-		...arrowsButtons, 
-		dots: true, 
-		infinite: true,
-		speed: 800,
-		rtl: isRTL, 
-		responsive: [
-			{ 
-				breakpoint: 768,
-				settings: {
-					arrows: false
-				}
-			}
-		] 
-	});
+	// $('.slider-img').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: false, 
+	// 	dots: false, 
+	// 	// infinite: true,
+	// 	asNavFor: '.slider-info',
+	// 	speed: 800,
+	// 	rtl: isRTL,  
+	// });
+	// $('.slider-info').slick({
+	//   slidesToShow: 3,
+	//   slidesToScroll: 1,
+	//   arrows: false, 
+	//   dots: false, 
+	// //   infinite: true,  
+	//   vertical: true,
+	//   asNavFor: '.slider-img',    
+	// });
 
+	// Questions
+	$('.questions-component').each(function(i, el){
+		$(el).find('.answers').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			fade: true,
+			speed: 600,
+			swipe: false,
+			rtl: isRTL, 
+		});
+
+		$(el).find('.questions li').append('<div class="item-line"></div>');
+
+		equalSlideHeight($(el).find('.answers'));
+
+		$(el).find('.questions button').click(function(e){
+			e.preventDefault();
+
+			let slideIndex = parseInt( $(this).closest('li').data('slide') );
+
+			$(this).closest('li').addClass('current').siblings().removeClass("current");
+
+			$(el).find('.answers').slick('slickGoTo', slideIndex);
+		});
+
+		$(el).find('.questions button').eq(0).trigger('click');
+	});
 	// Scroll to anchor
 	$(document).on('click', 'a[href^="#"]', function (event) {
 		event.preventDefault();
