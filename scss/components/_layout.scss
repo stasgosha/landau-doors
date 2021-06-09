@@ -67,19 +67,6 @@ picture, iframe, figure{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top: 6.3609vw;
-
-	@media screen and (max-width: 991px){
-		padding-top: 67px;
-	}
-
-	@media screen and (max-width: 767px){
-		padding-top: 89px;
-	}
-
-	@media screen and (max-width: 575px){
-		padding-top: 27.4667vw;
-	}
 
 	.page-content{
 		flex: auto;
@@ -93,57 +80,8 @@ picture, iframe, figure{
 }
 
 .container{
-	width: 91.1215vw;
-	margin: 0 auto;
-
-	@media screen and (min-width: 992px){
-		max-width: 72.7083vw;
-	}
-}
-
-.cards-list{
-	display: grid;
-	grid-gap: 0.8333vw;
-
-	@for $i from 2 through 6 {
-		&.columns-#{$i} {
-			grid-template-columns: repeat(#{$i}, 1fr);
-		}
-	}
-
-	@media screen and (max-width: 1199px){
-		@for $i from 1 through 4 {
-			&.lg-columns-#{$i} {
-				grid-template-columns: repeat(#{$i}, 1fr);
-			}
-		}
-	}
-
-	@media screen and (max-width: 991px){
-		grid-gap: 8px;
-
-		@for $i from 1 through 4 {
-			&.md-columns-#{$i} {
-				grid-template-columns: repeat(#{$i}, 1fr);
-			}
-		}
-	}
-
-	@media screen and (max-width: 767px){
-		@for $i from 1 through 3 {
-			&.sm-columns-#{$i} {
-				grid-template-columns: repeat(#{$i}, 1fr);
-			}
-		}
-	}
-
-	@media screen and (max-width: 575px){
-		@for $i from 1 through 3 {
-			&.xs-columns-#{$i} {
-				grid-template-columns: repeat(#{$i}, 1fr);
-			}
-		}
-	}
+	width: 42.4479vw;
+	margin: 0 auto 0 7.2917vw;
 }
 
 .visually-hidden{
@@ -155,4 +93,51 @@ picture, iframe, figure{
 	padding: 0;
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+
+.page-video-bg{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	video{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+		object-fit: cover;
+		object-position: center center;
+		// transition: all .1s;
+
+		&.hidden{
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.fullscreen-section{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+body{
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+}
+
+.wrapper .page-content{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 500vh;
+	transition: transform 1.2s cubic-bezier(.51,-0.36,.46,1);
 }
