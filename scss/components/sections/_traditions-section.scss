@@ -1,0 +1,94 @@
+.traditions-section{
+	.section-caption{
+		margin-bottom: 3.0208vw;
+		max-width: 33.3333vw;
+	}
+}
+
+.protos-grid{
+	display: grid;
+	grid-template-columns: 18.2813vw 1fr;
+	grid-gap: 1.0417vw;
+}
+
+.photo-card{
+
+	display: grid;
+	align-items: center;
+	grid-template-columns: var(--image-width) var(--content-width);
+	grid-gap: 1.0417vw;
+
+	transition: all .6s;
+	transform: translateY(1vw);
+	opacity: 0;
+	visibility: hidden;
+
+	.active &{
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.card-image{
+		width: var(--image-width);
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.card-content{
+		width: var(--content-width);
+		font-size: 0.9375vw;
+		line-height: 1.111;
+		letter-spacing: 0.02em;
+	}
+
+	.card-caption{
+		font-size: 1.0417vw;
+		line-height: 1.1;
+		letter-spacing: 0.02em;
+		font-family: $second-font;
+		font-weight: bold;
+		color: $primary;
+	}
+
+	&:nth-child(1),
+	&:nth-child(3){
+		grid-template-columns: var(--content-width) var(--image-width);
+		text-align: left;
+
+		.card-image{
+			order: 2;
+		}
+	}
+
+	&:nth-child(1){
+		--image-width: 12.3958vw;
+		--content-width: 4.88vw;
+		align-self: end;
+		transition-delay: calc(0 * 0.3s + 1.2s);
+	}
+
+	&:nth-child(2){
+		--image-width: 8.6458vw;
+		--content-width: 9.4792vw;
+		transition-delay: calc(1 * 0.3s + 1.2s);
+	}
+
+	&:nth-child(3){
+		--image-width: 10.4167vw;
+		--content-width: min-content;
+		justify-self: end;
+		transition-delay: calc(2 * 0.3s + 1.2s);
+	}
+
+	&:nth-child(4){
+		--image-width: 13.2813vw;
+		--content-width: 1fr;
+		align-self: start;
+		transition-delay: calc(3 * 0.3s + 1.2s);
+	}
+}

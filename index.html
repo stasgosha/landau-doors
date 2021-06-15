@@ -20,18 +20,18 @@
 					<div class="header-block">
 						<nav class="top-nav">
 							<ul>
-								<li><a href="#">דלתות לנדאו</a></li>
-								<li><a href="#">הקו העיצובי</a></li>
-								<li><a href="#">האיכות</a></li>
-								<li><a href="#">המסורת</a></li>
-								<li><a href="#">המסורת</a></li>
+								<li class="active"><a href="#" data-goto-screen="1" data-text="דלתות לנדאו">דלתות לנדאו</a></li>
+								<li><a href="#" data-goto-screen="2" data-text="הקו העיצובי">הקו העיצובי</a></li>
+								<li><a href="#" data-goto-screen="3" data-text="האיכות">האיכות</a></li>
+								<li><a href="#" data-goto-screen="4" data-text="המסורת">המסורת</a></li>
+								<li class="highlighted"><a href="#" data-goto-screen="5" data-text="המסורת">המסורת</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="header-block">
-						<a href="#top" class="logo-block">
+						<div class="logo-block">
 							<img src="img/logo.png" alt="Landau Doors">
-						</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -52,88 +52,411 @@
 					</div>
 
 					<div class="section-footer">
-						<button class="btn">לצפייה בסרטון שלנו</button>
+						<button class="btn btn-big">
+							<svg class="btn-icon">
+								<use xlink:href="img/icons-sprite.svg#play"></use>
+							</svg>
+							<span class="btn-text">לצפייה בסרטון שלנו</span>
+						</button>
+					</div>
+				</div>
+
+				<button data-goto-screen="5" class="bottom-phone-btn">
+					<span class="btn-image">
+						<img src="img/content-images/phone.png" alt="">
+					</span>
+					<span class="btn-text">ליצירת <br>קשר</span>
+				</button>
+			</section>
+
+			<section class="products-section fullscreen-section" data-point="0.21">
+				<div class="container">
+					<div class="section-caption">
+						<h2 class="sc-title">הקו העיצובי שלנו</h2>
+						<p class="sc-subtitle">אנחנו מעצבים דלתות יוקרה בהתאמה אישית על הסקאלה שבין המינימליסטי לשובר המוסכמות.</p>
+					</div>
+
+					<div class="section-slider">
+						<div class="products-slider-wrapper">
+							<div class="products-slider">
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #1"
+										data-sku="2187621">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #2"
+										data-sku="2187622">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #3"
+										data-sku="2187623">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #4"
+										data-sku="2187624">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #5"
+										data-sku="2187625">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #6"
+										data-sku="2187626">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #7"
+										data-sku="2187627">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="product-card"
+										data-image="img/content-images/products/door-1.jpg"
+										data-name="עץ מהגוני ריבועי #8"
+										data-sku="2187628">
+										<div class="card-image">
+											<img src="img/content-images/products/door-1.jpg" alt="">
+										</div>
+										<div class="card-content">
+											<h3 class="card-caption">מצאתי את האחת שלי</h3>
+											<div class="card-text">
+												<p>עץ מהגוני ריבועי #3</p>
+											</div>
+											<div class="card-footer">
+												<button class="card-link">לפרטים והזמנה </button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slider-bottom-line">
+								<div class="right-text">אקסטרווגנטי</div>
+								<div class="left-text">מינימליסטי</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="chandelier">
+					<img src="img/content-images/chandelier.png" alt="">
+				</div>
+			</section>
+
+			<section class="quality-section fullscreen-section" data-point="0.47">
+				<div class="container">
+					<div class="section-caption">
+						<h2 class="sc-title">האיכות שלנו</h2>
+						<p class="sc-subtitle">כל דלת שייצרנו ב 60 השנים האחרונות, קבעה את סטנדרט האיכות של דלתות הפנים בישראל. זה מתחיל מחומרי הגלם וסוג העץ, דרך עבודת הנגרות הבלתי מתפשרת ועד הצבע והעיצוב החדשניים.  <br>אנחנו מאמינים שדלת פנים איכותית חייבת להתאים לבית שלך כמו כפפה, תלווה אותך שנים רבות ותגרום להורים להתגאות ולחברים לקנא.</p>
+					</div>
+
+					<div class="quality-slider-component">
+						<div class="arm">
+							<img src="img/content-images/quality/arm.png" alt="">
+						</div>
+
+						<div class="cmp-slider">
+							<div class="quality-slider">
+								<!-- Обрати внимание - в последнем слайде другая верстка -->
+								<div class="slide">
+									<div class="quality-slider-block">
+										<div class="block-top">
+											<div class="top-text">
+												<p> אנחנו נבנה את הדלתות שלך בהתאמה לכל חזון עיצובי שיש לך, גם בגדלים ובצבעים לא סטנדרטיים.</p>
+											</div>
+										</div>
+										<div class="block-bottom">
+											<div class="block-image">
+												<img src="img/content-images/quality/slide-1-image.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="quality-slider-block">
+										<div class="block-top">
+											<div class="top-text">
+												<p> הדלתות שלנו מצטיינות בגימור מושלם בין עץ למתכת כדי לאפשר תנועה חלקה גם בפעם ה-50,000.</p>
+											</div>
+										</div>
+										<div class="block-bottom">
+											<div class="block-image">
+												<img src="img/content-images/quality/slide-2-image.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="quality-slider-block">
+										<div class="block-top">
+											<div class="top-text">
+												<p> אנחנו נבנה את הדלתות שלך בהתאמה לכל חזון עיצובי שיש לך, גם בגדלים ובצבעים לא סטנדרטיים.</p>
+											</div>
+										</div>
+										<div class="block-bottom">
+											<div class="comparsion-block">
+												<div class="block-item">
+													<h4 class="item-caption">דלת לנדאו</h4>
+													<div class="block-image">
+														<img src="img/content-images/quality/landau-door.jpg">
+													</div>
+												</div>
+												<div class="block-item">
+													<h4 class="item-caption">דלת סטנדרטית</h4>
+													<div class="block-image">
+														<img src="img/content-images/quality/standard-door.jpg">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cmp-nav">
+							<button class="nav-btn" data-slide="0">התאמה אישית</button>
+							<button class="nav-btn" data-slide="1">פרזול איכותי</button>
+							<button class="nav-btn" data-slide="2">חומרי גלם</button>
+						</div>
+
+						<!-- Нужно для стилизации -->
+						<div class="nav-bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="first-screen-section fullscreen-section" data-point="0.21">
+			<section class="traditions-section fullscreen-section" data-point="0.7">
 				<div class="container">
-					<div class="section-caption with-line">
-						<h2 class="sc-title">דלתות לנדאו</h2>
-						<p class="sc-subtitle big">הרהיט הכי יפה בבית</p>
+					<div class="section-caption">
+						<h2 class="sc-title">המסורת שלנו</h2>
+						<p class="sc-subtitle">מעל ל-60 שנה שאנחנו מתמחים בתכנון, עיצוב ויצירת דלתות פנים. <br>זה העסק שלנו, זאת המהות שלנו ואנחנו לא מוכנים להיות פחות מהטובים ביותר. <br>כשתפתחו את הדלת שלנו תרגישו מיד את ההבדל באיכות.</p>
 					</div>
 
-					<div class="section-text">
-						<p>כל דלת ודלת בבית היא פתח לעולם קטן עם אופי, מראה וסגנון משלו.
-							מעל ל-60 שנה שאנחנו מייצרים דלתות איכות שמובילות לעולמות המעוצבים,
-							המרגשים והמרתקים ביותר בבית הישראלי.
-							אנחנו דלתות לנדאו ואנחנו כאן כדי לעצב את הרהיט הכי יפה בבית שלך.</p>
-					</div>
+					<div class="protos-grid">
+						<div class="photo-card">
+							<div class="card-image">
+								<img src="img/content-images/photos/shahar.jpg" alt="">
+							</div>
+							<div class="card-content">
+								<h3 class="card-caption">שחר <br>לנדאו</h3>
+								<p>מנכ"ל אשדוד</p>
+							</div>
+						</div>
 
-					<div class="section-footer">
-						<button class="btn">לצפייה בסרטון שלנו</button>
+						<div class="photo-card">
+							<div class="card-image">
+								<img src="img/content-images/photos/noa.jpg" alt="">
+							</div>
+							<div class="card-content">
+								<h3 class="card-caption">נועה <br>לנדאו-פוטסמן</h3>
+								<p>מנהלת שירות לקוחות ואולם תצוגה</p>
+							</div>
+						</div>
+
+						<div class="photo-card">
+							<div class="card-image">
+								<img src="img/content-images/photos/avraham.jpg" alt="">
+							</div>
+							<div class="card-content">
+								<h3 class="card-caption">אברהם <br>לנדאו</h3>
+								<p>בעלים</p>
+							</div>
+						</div>
+
+						<div class="photo-card">
+							<div class="card-image">
+								<img src="img/content-images/photos/shahar.jpg" alt="">
+							</div>
+							<div class="card-content">
+								<h3 class="card-caption">אסתר <br>לנדאו-אביעד</h3>
+								<p>שותפה</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="first-screen-section fullscreen-section" data-point="0.47">
+			<section class="contacts-section fullscreen-section" data-point="1">
 				<div class="container">
-					<div class="section-caption with-line">
-						<h2 class="sc-title">דלתות לנדאו</h2>
-						<p class="sc-subtitle big">הרהיט הכי יפה בבית</p>
+					<div class="section-caption">
+						<h2 class="sc-title">נשמח לדבר איתך</h2>
+						<p class="sc-subtitle">למידע נוסף על הדלתות שלנו ולתאום פגישה אנחנו תמיד זמינים</p>
 					</div>
 
-					<div class="section-text">
-						<p>כל דלת ודלת בבית היא פתח לעולם קטן עם אופי, מראה וסגנון משלו.
-							מעל ל-60 שנה שאנחנו מייצרים דלתות איכות שמובילות לעולמות המעוצבים,
-							המרגשים והמרתקים ביותר בבית הישראלי.
-							אנחנו דלתות לנדאו ואנחנו כאן כדי לעצב את הרהיט הכי יפה בבית שלך.</p>
-					</div>
+					<div class="section-inner">
+						<div class="section-right">
+							<a href="tel:0728886644" class="phone-link">072-8886644</a>
 
-					<div class="section-footer">
-						<button class="btn">לצפייה בסרטון שלנו</button>
+							<h3 class="small-caption">ניתן לקבוע איתנו <br>פגישה ישר ביומן</h3>
+
+							<ul class="locations-list">
+								<li><strong>אולם תצוגה </strong><br>רח’ מנופים 2 הרצליה פיתוח</li>
+								<li><strong>מפעל ותצוגה</strong><br> את. בני דרום – צומת אשדוד</li>
+							</ul>
+
+							<!-- Ссылка на внешний сайт -->
+							<a href="#" target="_" rel="noopener nofollow" class="btn">
+								<svg class="btn-icon">
+									<use xlink:href="img/icons-sprite.svg#calendar"></use>
+								</svg>
+								<span class="btn-text">קבעו פגישה ביומן</span>
+							</a>
+						</div>
+						<div class="section-left">
+							<h3 class="small-caption">הקשיבו לאדריכלים שלכם</h3>
+
+							<div class="section-text">
+								<p>האדריכלים המובילים בישראל מעדיפים לעבוד עם דלתות לנדאו. השאירו פרטים והם יספרו לכם למה.</p>
+							</div>
+
+							<div class="contacts-form form">
+								<form action="">
+									<div class="form-fields">
+										<div class="form-field">
+											<input type="text" class="input-field" placeholder="שם מלא">
+										</div>
+										<div class="form-field">
+											<input type="email" class="input-field" placeholder="מייל">
+										</div>
+										<div class="form-field">
+											<input type="tel" class="input-field" placeholder="טלפון">
+										</div>
+									</div>
+									<div class="form-footer">
+										<button class="btn">
+											<svg class="btn-icon reverse">
+												<use xlink:href="img/icons-sprite.svg#play-reverse"></use>
+											</svg>
+											<span class="btn-text">שלח טופס</span>
+										</button>
+
+										<label class="checkbox">
+											<input type="checkbox" class="visually-hidden" checked>
+											<span class="fake-label">אני מאשר קבלת תוכן פרסומי</span>
+										</label>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section>
 
-			<section class="first-screen-section fullscreen-section" data-point="0.7">
-				<div class="container">
-					<div class="section-caption with-line">
-						<h2 class="sc-title">דלתות לנדאו</h2>
-						<p class="sc-subtitle big">הרהיט הכי יפה בבית</p>
-					</div>
-
-					<div class="section-text">
-						<p>כל דלת ודלת בבית היא פתח לעולם קטן עם אופי, מראה וסגנון משלו.
-							מעל ל-60 שנה שאנחנו מייצרים דלתות איכות שמובילות לעולמות המעוצבים,
-							המרגשים והמרתקים ביותר בבית הישראלי.
-							אנחנו דלתות לנדאו ואנחנו כאן כדי לעצב את הרהיט הכי יפה בבית שלך.</p>
-					</div>
-
-					<div class="section-footer">
-						<button class="btn">לצפייה בסרטון שלנו</button>
-					</div>
-				</div>
-			</section>
-
-			<section class="first-screen-section fullscreen-section" data-point="1">
-				<div class="container">
-					<div class="section-caption with-line">
-						<h2 class="sc-title">דלתות לנדאו</h2>
-						<p class="sc-subtitle big">הרהיט הכי יפה בבית</p>
-					</div>
-
-					<div class="section-text">
-						<p>כל דלת ודלת בבית היא פתח לעולם קטן עם אופי, מראה וסגנון משלו.
-							מעל ל-60 שנה שאנחנו מייצרים דלתות איכות שמובילות לעולמות המעוצבים,
-							המרגשים והמרתקים ביותר בבית הישראלי.
-							אנחנו דלתות לנדאו ואנחנו כאן כדי לעצב את הרהיט הכי יפה בבית שלך.</p>
-					</div>
-
-					<div class="section-footer">
-						<button class="btn">לצפייה בסרטון שלנו</button>
-					</div>
+				<div class="bottom-phone-btn">
+					<span class="btn-image">
+						<img src="img/content-images/phone.png" alt="">
+					</span>
+					<span class="btn-text visually-hidden">ליצירת <br>קשר</span>
 				</div>
 			</section>
 		</main>
@@ -149,7 +472,66 @@
 		</div>
 	</div>
 
-	<!-- <div class="modal video-modal" id="video-modal" tabindex="-1">
+	<div class="modal" id="product-modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button class="modal-close" aria-label="Close modal"></button>
+				
+				<div class="product-modal-card" id="js-product-modal-card">
+					<div class="card-content">
+						<h3 class="card-caption" id="js-product-caption"></h3>
+
+						<div class="card-text">
+							<p>מכל הדלתות בעולם בחרת בה והיא מאושרת עד מעל הקורה. <br>אנחנו נשמח לעזור לה להשתלב בעיצוב הבית שלך, <br>כל מה שנשאר לך לעשות הוא להשאיר לנו פרטים:</p>
+						</div>
+
+						<div class="card-form form">
+							<form action="">
+								<input type="hidden" id="js-product-name-field">
+								<input type="hidden" id="js-product-sku-field">
+								<div class="form-fields">
+									<div class="form-field">
+										<input type="text" class="input-field" placeholder="שם מלא">
+									</div>
+
+									<div class="form-field">
+										<input type="tel" class="input-field" placeholder="טלפון">
+									</div>
+
+									<div class="form-field wide">
+										<input type="email" class="input-field" placeholder="כתובת מייל">
+									</div>
+
+									<div class="form-field wide">
+										<textarea placeholder="היכן תכננת למקם אותה"></textarea>
+									</div>
+								</div>
+								<div class="form-footer">
+									<button class="btn">
+										<svg class="btn-icon">
+											<use xlink:href="img/icons-sprite.svg#play-reverse"></use>
+										</svg>
+										<span class="btn-text">שלח טופס</span>
+									</button>
+
+									<label class="checkbox">
+										<input type="checkbox" class="visually-hidden">
+										<span class="fake-label">אני מאשר קבלת תוכן פרסומי</span>
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="card-image">
+						<img src="" alt="" id="js-product-image">
+						<div class="card-sku">מקט: <span id="js-product-sku"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal" id="video-modal" tabindex="-1">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<button class="modal-close" aria-label="Close modal"></button>
@@ -158,7 +540,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

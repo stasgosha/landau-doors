@@ -1,0 +1,95 @@
+.contacts-section{
+	.section-caption{
+		margin-bottom: 2.6042vw;
+	}
+
+	.section-inner{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		text-align: center;
+
+		.section-left,
+		.section-right{
+			padding: 0 2.0833vw;
+		}
+
+		.section-right{
+			border-left: 0.1563vw solid $primary;
+			text-align: center;
+
+			.small-caption{
+				margin-bottom: 1.2500vw;
+			}
+
+			.btn{
+				padding-left: 4.6vw;
+			}
+		}
+	}
+
+	.section-text{
+		font-size: 1.1458vw;
+		line-height: 1.36;
+		margin-bottom: 1.2500vw;
+		max-width: 16.9792vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.phone-link{
+		font-size: 3.1250vw;
+		line-height: 1;
+		font-weight: bold;
+		color: $accent;
+		margin-bottom: 2vw;
+		display: block;
+
+		&:hover,
+		&:focus{
+			color: $primary;
+		}
+	}
+
+	.locations-list{
+		display: grid;
+		grid-gap: 0.4167vw;
+		font-size: 0.9375vw;
+		line-height: 1.333;
+		margin-bottom: 1.6667vw;
+
+		strong{
+			font-size: 1.0417vw;
+			line-height: 1.2;
+		}
+	}
+
+	.btn{
+		width: 100%;
+		max-width: 13.5417vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.contacts-form{
+	width: 100%;
+	max-width: 14.5833vw;
+	margin-left: auto;
+	margin-right: auto;
+
+	.form-fields{
+		display: grid;
+		grid-gap: 1.2500vw;
+		margin-bottom: 1.6667vw;
+	}
+
+	.form-footer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.btn{
+			margin-bottom: 1.0417vw;
+		}
+	}
+}

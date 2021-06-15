@@ -1,0 +1,64 @@
+.first-screen-section{
+	position: relative;
+
+	.section-caption{
+		margin-bottom: 1.2500vw;
+	}
+
+	.section-text{
+		max-width: 31.7708vw;
+	}
+
+	.section-footer{
+		margin-top: 2.0833vw;
+		max-width: 27.2917vw;
+
+		.btn{
+			width: 100%;
+		}
+	}
+}
+
+.bottom-phone-btn{
+	width: 18.9063vw;
+	height: 7.2917vw;
+	position: absolute;
+	bottom: 0;
+	left: 7.2917vw;
+	padding: 1.1979vw 1.0417vw;
+	display: flex;
+	justify-content: flex-start;
+	font-weight: bold;
+	color: $accent;
+	font-size: 1.2500vw;
+	line-height: 0.916;
+	transition: all $t;
+
+	.btn-text{
+		text-align: left;
+	}
+
+	.btn-image{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: contain;
+			object-position: center bottom;
+		}
+	}
+
+	&:hover,
+	&:focus{
+		color: $primary;
+	}
+}

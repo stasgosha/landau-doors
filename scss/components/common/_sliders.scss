@@ -11,16 +11,24 @@
 }
 
 .slick-arrow{
-	width: 1.3542vw; //26 
-	height: 2.7083vw; //52
+	width: 0.7813vw;
+	height: 1.3542vw;
 	z-index: 20;
 	background: transparent;
 	transition: all $t;
+	color: $primary;
+
+	&:hover,
+	&:focus{
+		color: $primary;
+	}
 
 	svg{
 		width: 100%;
 		height: 100%;
 		display: block;
+		stroke: currentColor;
+		fill: transparent;
 		transition: all $t;
 	}
 
@@ -35,7 +43,15 @@
 	}
 
 	&.slick-next{
-		// transform: scaleX(-1);
+		&:hover{
+			transform: translate(-3px, -50%);
+		}
+	}
+
+	&.slick-prev{
+		&:hover{
+			transform: translate(3px, -50%);
+		}
 	}
 }
 
